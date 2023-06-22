@@ -4,7 +4,7 @@ const connection = createPool({
     host:"127.0.0.1" || process.env.DB_HOST,
     user:"local" || process.env.DB_USER,
     password:"Golem100@" || process.env.DB_PASSWORD,
-    port:3306 || process.env.DB_PORT,
+    port:3306,
     database:"access" || process.env.DB_DBNAME
 })
 
