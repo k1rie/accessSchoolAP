@@ -1,11 +1,11 @@
 import { createPool } from "mysql2/promise";
 
 const connection = createPool({
-    host:"127.0.0.1" || process.env.DB_HOST,
-    user:"local" || process.env.DB_USER,
-    password:"Golem100@" || process.env.DB_PASSWORD,
+    host:process.env.DB_HOST || "127.0.0.1" ,
+    user:process.env.DB_USER || "local",
+    password: process.env.DB_PASSWORD || "Golem100@",
     port:3306,
-    database:"access" || process.env.DB_DBNAME
+    database:process.env.DB_DBNAME || "access"
 })
 
 export default connection
